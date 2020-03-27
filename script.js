@@ -1,4 +1,7 @@
 const button = document.querySelector('button');
 button.addEventListener('click', function(e) {
-    fetch('more.json').then(res => console.log(res));
+    fetch(`${location.origin}/more.json`)
+        .then(res => res.json())
+        .then(dat => console.log(dat))
+    ;
 });
